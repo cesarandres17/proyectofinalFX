@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.17550152783313402" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1507.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto_final.tucarro.viewcontroller.AdminPanelViewController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="709.0" prefWidth="572.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="42.0" layoutY="21.0" text="¡Bienvenido" textFill="#683dcc">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="37.0" prefHeight="32.0" prefWidth="88.0" text="admin!" textFill="#683dcc">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Separator layoutY="78.0" prefHeight="8.0" prefWidth="391.0" />
+            <VBox layoutX="17.0" layoutY="107.0" prefHeight="98.0" prefWidth="239.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnInfoAdmin" mnemonicParsing="false" onAction="#onInformacionAdmin" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Información administrador" />
+                  <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#onCerrarSesion" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Cerrar sesión" />
+               </children>
+            </VBox>
+            <VBox layoutX="17.0" layoutY="264.0" prefHeight="236.0" prefWidth="239.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnReportesEmpleados" mnemonicParsing="false" onAction="#onGenerarReporte" prefHeight="38.0" prefWidth="234.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Reportes empleados" />
+                  <Button fx:id="btnReporteClientes" mnemonicParsing="false" onAction="#onGenerarReporteCliente" prefHeight="38.0" prefWidth="232.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Reportes clientes" />
+                  <Button fx:id="btnReportesVehiculos" mnemonicParsing="false" onAction="#onGenerarReporteVehiculos" prefHeight="38.0" prefWidth="232.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Reportes vehículos" />
+                  <Button fx:id="btnReportesAlquileres" mnemonicParsing="false" onAction="#onReporteAlquiler" prefHeight="38.0" prefWidth="232.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Reportes alquileres" />
+                  <Button fx:id="btnEstadisticas" mnemonicParsing="false" onAction="#onIrEstadisticas" prefHeight="38.0" prefWidth="232.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Reportes Ventas" />
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <Separator layoutX="-3.0" layoutY="206.0" prefHeight="8.0" prefWidth="331.0" />
+            <Label layoutX="92.0" layoutY="221.0" text="Reportes" textFill="#683dcc">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Separator layoutY="514.0" prefHeight="18.0" prefWidth="294.0" />
+            <Pane layoutX="-4.0" layoutY="522.0" prefHeight="236.0" prefWidth="274.0" style="-fx-background-color: #683dcc;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="62.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/proyecto/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="709.0" prefWidth="1287.0" style="-fx-background-color: white;">
+         <children>
+            <SplitPane dividerPositions="0.49971131639722854" layoutY="3.0" orientation="VERTICAL" prefHeight="710.0" prefWidth="1254.0" style="-fx-background-color: white;">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="1450.0">
+                     <children>
+                        <TableView fx:id="tablaEmpleado" layoutX="-12.0" layoutY="-4.0" prefHeight="351.0" prefWidth="1250.0">
+                           <columns>
+                              <TableColumn fx:id="tcId" minWidth="8.0" prefWidth="8.0" text="ID" />
+                              <TableColumn fx:id="tcNombre" prefWidth="191.99999713897705" text="Nombre" />
+                              <TableColumn fx:id="tcApellido" prefWidth="100" text="Apellido" />
+                              <TableColumn fx:id="tcCedula" prefWidth="100" text="Cédula" />
+                              <TableColumn fx:id="tcEdad" prefWidth="100" text="Edad" />
+                              <TableColumn fx:id="tcCorreo" prefWidth="100" text="Correo" />
+                              <TableColumn fx:id="tcTelefono" prefWidth="100" text="Teléfono" />
+                              <TableColumn fx:id="tcUsuario" prefWidth="100" text="Usuario" />
+                              <TableColumn fx:id="tcPassword" prefWidth="100" text="Contraseña" />
+                              <TableColumn fx:id="tcPalabra" minWidth="100" prefWidth="142.4" text="Palabra secreta" />
+                              <TableColumn fx:id="tcRol" prefWidth="100" text="Rol" />
+                              <TableColumn fx:id="tcPregunta" prefWidth="100" text="Pregunta" />
+                           </columns>
+                        </TableView>
+
+                     </children>
+                  </AnchorPane>
+
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="1420.0">
+                     <children>
+                        <GridPane alignment="CENTER" hgap="30.0" layoutX="140.0" layoutY="47.0" prefHeight="222.0" prefWidth="974.0" vgap="30.0">
+                           <!-- Primera columna -->
+                           <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                           <TextField fx:id="txtID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                           <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                           <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                           <Label text="Apellido:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                           <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                           <Label text="Cédula:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                           <TextField fx:id="txtCedula" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                           <!-- Segunda columna -->
+                           <Label text="Correo:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                           <TextField fx:id="txtCorreo" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+                           <Label text="Teléfono:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <TextField fx:id="txtTelefono" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                           <Label text="Usuario:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <TextField fx:id="txtUsuario" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                           <Label text="Contraseña:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                           <!-- Tercera columna -->
+                           <Label text="Edad:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                           <TextField fx:id="txtEdad" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+
+                           <Label text="Seleccione el rol del empleado:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                           <ComboBox fx:id="cbRol" prefHeight="26.0" prefWidth="148.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+                           <Label text="Seleccione una pregunta:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                           <ComboBox fx:id="cbPregunta" prefHeight="26.0" prefWidth="149.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                           <Label text="Palabra secreta:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                           <TextField fx:id="txtPalabra" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                           <PasswordField fx:id="pwfContrasena" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="27.200006103515626" minHeight="25.6" prefHeight="27.200006103515626" />
+                              <RowConstraints maxHeight="26.400000000000006" minHeight="24.79999389648438" prefHeight="24.79999389648438" />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                        </GridPane>
+
+                        <Separator layoutX="-6.0" layoutY="38.0" prefHeight="18.0" prefWidth="1438.0" />
+                        <Separator layoutX="3.0" layoutY="269.0" prefHeight="3.0" prefWidth="1420.0" />
+
+                        <HBox alignment="TOP_CENTER" layoutX="235.0" layoutY="282.0" prefHeight="38.0" prefWidth="782.0" spacing="50.0">
+                           <children>
+                              <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#onNuevo" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Nuevo" />
+                              <Button fx:id="btnAgregar" mnemonicParsing="false" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Agregar" />
+                              <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#onActualizar" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Actualizar" />
+                              <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#onEliminar" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #683dcc; -fx-text-fill: white;" text="Eliminar" />
+                              <RadioButton fx:id="btnBloquear" mnemonicParsing="false" prefHeight="34.0" prefWidth="118.0" style="-fx-text-fill: #683dcc;" text="Bloquear acceso" />
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="549.0" layoutY="14.0" text="Agregar empleado" textFill="#683dcc">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
