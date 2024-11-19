@@ -161,8 +161,8 @@ public class Empresa {
         Usuario empleadoUsuario = new Usuario();
         empleadoUsuario.setNombreUsuario("empleado1");
         empleadoUsuario.setContrasena("empleado123");
-        empleadoUsuario.setPreguntasSeguridad(PreguntasSeguridad.COLOR_FAVORITO);
-        empleadoUsuario.setPalabraSecreta("Verde");
+        empleadoUsuario.setPreguntasSeguridad(PreguntasSeguridad.NOMBREDETUPRIMERANOVIA);
+        empleadoUsuario.setPalabraSecreta("CHISPAS");
         empleado.setUsuario(empleadoUsuario);
         listaEmpleados.add(empleado);
         listaUsuarios.add(empleadoUsuario);
@@ -179,8 +179,8 @@ public class Empresa {
         Usuario empleadoUsuario2 = new Usuario();
         empleadoUsuario2.setNombreUsuario("empleado2");
         empleadoUsuario2.setContrasena("empleado321");
-        empleadoUsuario2.setPreguntasSeguridad(PreguntasSeguridad.COMIDA_FAVORITA);
-        empleadoUsuario2.setPalabraSecreta("Hamburguesa");
+        empleadoUsuario2.setPreguntasSeguridad(PreguntasSeguridad.PRIMERMASCOTA);
+        empleadoUsuario2.setPalabraSecreta("CHISPAS");
         empleado2.setUsuario(empleadoUsuario2);
         listaEmpleados.add(empleado2);
         listaUsuarios.add(empleadoUsuario2);
@@ -196,8 +196,8 @@ public class Empresa {
         Usuario clienteUsuario = new Usuario();
         clienteUsuario.setNombreUsuario("cliente1");
         clienteUsuario.setContrasena("cliente123");
-        clienteUsuario.setPreguntasSeguridad(PreguntasSeguridad.DEPORTE_FAVORITO);
-        clienteUsuario.setPalabraSecreta("Tenis");
+        clienteUsuario.setPreguntasSeguridad(PreguntasSeguridad.SERIEDETELEVISIONFAVORITA);
+        clienteUsuario.setPalabraSecreta("CHISPAS LA SERIE");
         cliente.setUsuario(clienteUsuario);
         listaClientes.add(cliente);
         listaUsuarios.add(clienteUsuario);
@@ -213,8 +213,8 @@ public class Empresa {
         Usuario clienteUsuario2 = new Usuario();
         clienteUsuario2.setNombreUsuario("cliente2");
         clienteUsuario2.setContrasena("cliente321");
-        clienteUsuario2.setPreguntasSeguridad(PreguntasSeguridad.CIUDAD_NACIMIENTO);
-        clienteUsuario2.setPalabraSecreta("Armenia");
+        clienteUsuario2.setPreguntasSeguridad(PreguntasSeguridad.MATERIADECOLEGIOFAVORITA);
+        clienteUsuario2.setPalabraSecreta("FUNDAMENTOS DE ELECTRONICA");
         cliente.setUsuario(clienteUsuario2);
         listaClientes.add(cliente2);
         listaUsuarios.add(clienteUsuario2);

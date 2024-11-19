@@ -1,6 +1,14 @@
 package co.edu.uniquindio.proyecto_final.tucarro.model;
 
+/**
+ * La clase Sedan representa un vehículo del tipo sedán en el sistema.
+ * Un sedán es un tipo de automóvil que cuenta con características específicas, 
+ * tales como el número de pasajeros, puertas, capacidad del maletero, 
+ * y diversos sistemas de seguridad y confort.
+ */
 public class Sedan extends Vehiculo {
+
+    // Atributos específicos del sedán
     private int numeroPasajeros;
     private int numeroPuertas;
     private double capacidadMaletero;
@@ -13,6 +21,30 @@ public class Sedan extends Vehiculo {
     private boolean sensorTraficoCruzado;
     private boolean asistentePermanenciaCarril;
 
+    /**
+     * Constructor que inicializa los valores de un objeto Sedan con los parámetros proporcionados.
+     * 
+     * @param marca Marca del vehículo.
+     * @param estado Estado del vehículo (por ejemplo, nuevo, usado).
+     * @param modelo Modelo del vehículo.
+     * @param placa Placa del vehículo.
+     * @param cambios Número de cambios de la transmisión.
+     * @param velocidadMaxima Velocidad máxima del vehículo.
+     * @param cilindraje Cilindraje del motor del vehículo.
+     * @param combustible Tipo de combustible del vehículo.
+     * @param transmisionAutomatica Indica si el vehículo tiene transmisión automática.
+     * @param numeroPasajeros Número de pasajeros que puede transportar el vehículo.
+     * @param numeroPuertas Número de puertas del vehículo.
+     * @param capacidadMaletero Capacidad del maletero del vehículo.
+     * @param aireAcondicionado Indica si el vehículo tiene aire acondicionado.
+     * @param camaraReversa Indica si el vehículo tiene cámara de reversa.
+     * @param velocidadCrucero Indica si el vehículo tiene control de velocidad crucero.
+     * @param numeroBolsasAire Número de bolsas de aire en el vehículo.
+     * @param abs Indica si el vehículo tiene sistema de frenos antibloqueo (ABS).
+     * @param sensoresColision Indica si el vehículo tiene sensores de colisión.
+     * @param sensorTraficoCruzado Indica si el vehículo tiene sensores de tráfico cruzado.
+     * @param asistentePermanenciaCarril Indica si el vehículo tiene asistente de permanencia en el carril.
+     */
     public Sedan(String marca, String estado, String modelo, String placa,
                  int cambios, double velocidadMaxima, double cilindraje,
                  String combustible, boolean transmisionAutomatica,
@@ -33,8 +65,14 @@ public class Sedan extends Vehiculo {
         this.asistentePermanenciaCarril = asistentePermanenciaCarril;
     }
 
-    public Sedan(){
+    /**
+     * Constructor vacío de la clase Sedan.
+     * Permite la creación de un objeto Sedan sin valores iniciales.
+     */
+    public Sedan() {
     }
+
+    // Métodos getter y setter para los atributos de la clase Sedan
 
     public int getNumeroPasajeros() {
         return numeroPasajeros;
@@ -124,6 +162,11 @@ public class Sedan extends Vehiculo {
         this.asistentePermanenciaCarril = asistentePermanenciaCarril;
     }
 
+    /**
+     * Representa el objeto Sedan como una cadena de texto.
+     * 
+     * @return La representación en formato string del sedan.
+     */
     @Override
     public String toString() {
         return "Sedan{" +
